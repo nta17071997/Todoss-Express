@@ -1,0 +1,11 @@
+h1 Todos
+form(action="/todos/search" method="GET")
+  input(type="text", name="q", value=question)
+  button Search
+a(href="/todos/create") NewTodo
+ul
+  each todo in todos
+    li
+      span= todo.name
+      span &nbsp
+      a(href="/todos/" + todo.id + "/delete") Delete
